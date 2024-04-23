@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.product {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.product-actions {
+  display: flex; 
+  align-items: center;
+}
+
+.stock {
+  color: rgb(74, 146, 3);
+}
+
+.price {
+  margin-right: 25px;
+}
