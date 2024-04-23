@@ -8,7 +8,8 @@ import Cart from "./components/Cart";
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage] = useState(1);
+
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -89,14 +90,6 @@ function App() {
       });
   };
 
-  const nextPage = () => {
-    setCurrentPage(currentPage + 1);
-  };
-
-  const prevPage = () => {
-    setCurrentPage(currentPage - 1);
-  };
-
   return (
     <Router>
       <div className="App">
@@ -108,11 +101,6 @@ function App() {
               updateQuantity={updateQuantity}
               processOrder={processOrder} /> } />
         </Routes>
-        <div className="pagination">
-          <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
-          <span>Page {currentPage}</span>
-          <button onClick={nextPage}>Next</button>
-        </div>
       </div>
     </Router>
   );

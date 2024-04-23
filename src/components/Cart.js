@@ -47,7 +47,7 @@ const Cart = ({ cart, products, removeFromCart, updateQuantity, processOrder }) 
           <p>Total Order:</p>
           <p>${calculateOrderTotal()}</p>
         </div>
-        <button onClick={processOrder}>Process Order</button>
+        <button onClick={processOrder} disabled={Object.keys(cart).length === 0}>Process Order</button>
         <div>
             <br></br>
             <Link to="/">
